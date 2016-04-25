@@ -17,6 +17,9 @@ class CustomSet:
                   if el not in self._newList:
                         self._newList.append(el)
       def contains(self, member):
+            """Preconditions: Accepts customSet object and member, expected to be an int.
+               Description: Checks for member in the set
+               Postconditions: Returns string of yes or no depending on result."""
             if member in self._listOfNums:
                   print("Yes!")
             if member not in self._listOfNums:
