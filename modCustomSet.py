@@ -16,6 +16,24 @@ class CustomSet:
             for el in self._listOfNums:
                   if el not in self._newList:
                         self._newList.append(el)
+      def contains(self, member):
+            if member in self._listOfNums:
+                  print("Yes!")
+            if member not in self._listOfNums:
+                  print("No!")
+
+      def __str__(self):
+            """Preconditions: Only recieves self.
+               Description: Prints a string of the customset object.
+               Postconditions: Nothing, only returns a string."""
+            return(str(self._listOfNums))
+
+      def brackets(self):
+            """Preconditions: Only recives self.
+               Description: Prints a string of the customset object surrounded by brackets.
+               Postconditions: Nothing, returns a string."""
+            return("{ "+str(self)+" }")
+            
 
 
 
