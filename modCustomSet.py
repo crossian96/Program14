@@ -9,7 +9,7 @@ _date_ = '4/22/2015'
 class CustomSet:
       def __init__(self, listOfNums):
             """Preconditions: Accepts list of nums, expected to be a list of ints.
-               Description: This is a contructor that takes a list of nubmers and then returns a list without any duplicates
+               Description: This is a contructor that takes a list of numbers and then returns a list without any duplicates
                Postconditions: An object of type CustomSet is created, which is a list"""
             self._newList=[]
             self._listOfNums=listOfNums
@@ -17,13 +17,13 @@ class CustomSet:
                   if el not in self._newList:
                         self._newList.append(el)
       def contains(self, member):
-            """Preconditions: Accepts customSet object and member, expected to be an int.
-               Description: Checks for member in the set
-               Postconditions: Prints string of yes or no depending on result."""
+            """Preconditions: Accepts self and member, expected to be an int or string.
+               Description: This method overrides "in" and looks for the specific member in the set.
+               Postconditions: Prints either "Yes" or "Not there"."""
             if member in self._listOfNums:
-                  print("Yes!")
-            if member not in self._listOfNums:
-                  print("No!")
+                  print("Yes")
+            elif member not in self._listOfNums:
+                  print("Not there")
 
       def __str__(self):
             """Preconditions: Only recieves self.
@@ -32,7 +32,7 @@ class CustomSet:
             return(str(self._listOfNums))
 
       def brackets(self):
-            """Preconditions: Only recives self.
+            """Preconditions: Only recieves self.
                Description: Prints a string of the customset object surrounded by brackets.
                Postconditions: Nothing, returns a string."""
             return("{ "+str(self)+" }")
