@@ -6,8 +6,9 @@ print(a1)
 
 print(CustomSet.brackets(a1)) #Method 9
 
-CustomSet.contains(a1, 4)     #Method 5
-CustomSet.contains(a1, 6)
+6 in a1           #Method 5
+4 in a1
+
 
 #testing program 6,7,8
 x = [1,2,3]
