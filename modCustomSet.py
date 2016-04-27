@@ -36,7 +36,35 @@ class CustomSet:
                Description: Prints a string of the customset object surrounded by brackets.
                Postconditions: Nothing, returns a string."""
             return("{ "+str(self)+" }")
-            
+      
+      def __ge__(self,other):
+            """
+            Description: If one number is greater than other or not
+            Preconditions: Two Values of datatype Customset.
+            Postcondition:None
+            """            
+            if self._newList >= other._newList:
+               return "Yes"
+            else:
+               return "No Subset"
+        
+      def __le__(self,other):
+            """
+            Description: If one number is less than other or not.
+            Precondition: Two values of datatype CuustomerSet.
+            PostCondition:None
+            """            
+            if self._newList <= other._newList:             
+               return "Yes"
+            else:
+               return "No Subset"
+      def __len__(self):
+            """
+            Description: Find the len of given list.
+            Precondition:none
+            postcondition:none
+            """
+            return len(self._newList)
 
 
 
